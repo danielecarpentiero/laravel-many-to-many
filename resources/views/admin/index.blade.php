@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+    @include('partials.session_message')
 <div class="container">
     <h1>My projects</h1>
     <ul>

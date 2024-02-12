@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+    @include('partials.errors')
     <div class="container">
         <form action="{{route('admin.projects.update', $project)}}" method="POST">
         @csrf
