@@ -39,12 +39,14 @@
               </select>
         </label>
     </div>
+        <div class="mb-3">
         @foreach($technologies as $technology)
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{$technology['id']}}" name="technologies[]" id="technology-{{$technology['id']}}" {{in_array($technology['id'], old('$technologies', [])) ? 'checked' : '' }} >
             <label class="form-check-label" for="technology-{{$technology['id']}}">{{$technology['title']}}</label>
         </div>
         @endforeach
+        </div>
     <button type="submit" class="btn btn-success my-3">Submit</button>
     <div>
         <a class="btn btn-secondary" href="{{ route('admin.projects.index') }}">Go back to projects list</a>
