@@ -23,7 +23,7 @@ class UpdateTypeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', Rule::unique('types')->ignore($this->type), 'max:100', 'string']
+            'title' => ['required', Rule::unique('types')->ignore($this->type), 'max:50', 'string']
         ];
     }
 }
