@@ -75,6 +75,12 @@
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Types
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'dashboard' ? 'bg-secondary' : '' }}"
+                                   href="{{ route('admin.technologies.index') }}">
+                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Technologies
+                                </a>
+                            </li>
                         </ul>
 
 
