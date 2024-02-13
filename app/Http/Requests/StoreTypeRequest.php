@@ -22,7 +22,7 @@ class StoreTypeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'max:100', 'unique:types,title']
+            'title' => ['required', 'max:50', 'unique:types,title']
         ];
     }
 }

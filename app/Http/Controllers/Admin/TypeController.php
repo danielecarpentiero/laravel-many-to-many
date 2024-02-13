@@ -64,7 +64,7 @@ class TypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTypeRequest $request, Type $type)
+    public function update(UpdateTypeRequest $request, Type $type): \Illuminate\Http\RedirectResponse
     {
         $data = $request->validated();
         $type->slug = Str::of($data['title'])->slug();
@@ -77,7 +77,7 @@ class TypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Type $type)
+    public function destroy(Type $type): \Illuminate\Http\RedirectResponse
     {
         $type->delete();
 
